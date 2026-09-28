@@ -3,6 +3,7 @@
 import { createElement } from "react";
 import { useRouter } from "next/navigation";
 import ExamCalendar from "@/components/ExamCalendar";
+import HeroGlobe from "@/components/HeroGlobe";
 
 const STOPS = [
   { n: 1, title: "Профиль", sub: "короткая анкета о тебе", start: true },
@@ -20,6 +21,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+      <HeroGlobe startHref="#start" />
       <header className="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
         <span className="font-hero text-lg" style={{ color: "var(--color-ink)" }}>
           Ориентир
@@ -37,7 +39,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
+      <section id="start" className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
         <div className="grid md:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
           <div>
             <span className="inline-flex items-center rounded-full px-3 py-1 text-sm" style={{ background: "var(--color-accent-soft)", color: "var(--color-accent)" }}>
